@@ -4,16 +4,19 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "postinstall": "ng build --prod",
     "deploy:gh": "ng build --prod --base-href='https://gotcreme.github.io/angular-deploy/' && ngh",
     "deploy:firebase": "ng build --prod && firebase deploy"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.2.4",    
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -25,6 +28,7 @@
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "typescript": "~2.3.3",    
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
